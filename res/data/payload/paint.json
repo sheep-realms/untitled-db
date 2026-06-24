@@ -1,14 +1,17 @@
 [
 	{
 		"title": "Easy Paint Tool SAI",
+		"author": "SYSTEMAX",
 		"tags": ["2d"]
 	},
 	{
 		"title": "Adobe Photoshop",
+		"author": "Adobe Inc.",
 		"tags": ["2d", "graphic_design"]
 	},
 	{
 		"title": "Clip Studio Paint",
+		"author": "CELSYS",
 		"tags": ["2d", "comic"]
 	},
 	{
@@ -33,6 +36,7 @@
 	},
 	{
 		"title": "Adobe Illustrator",
+		"author": "Adobe Inc.",
 		"tags": ["2d", "graphic_design"]
 	},
 	{
@@ -81,6 +85,7 @@
 	},
 	{
 		"title": "Adobe Edge",
+		"author": "Adobe Inc.",
 		"tags": ["2d"]
 	},
 	{
@@ -129,6 +134,7 @@
 	},
 	{
 		"title": "Adobe Fireworks",
+		"author": "Adobe Inc.",
 		"tags": ["2d"]
 	},
 	{
@@ -205,6 +211,7 @@
 	},
 	{
 		"title": "Aseprite",
+		"author": "Igara Studio S.A.",
 		"tags": ["2d", "pixel"]
 	},
 	{
@@ -213,42 +220,52 @@
 	},
 	{
 		"title": "Figma",
+		"author": "Figma, Inc.",
 		"tags": ["2d", "graphic_design"]
 	},
 	{
 		"title": "Sketch",
+		"author": "Sketch B.V.",
 		"tags": ["2d", "graphic_design"]
 	},
 	{
-		"title": "Axure",
+		"title": "Axure RP",
+		"author": "Axure Software Solutions, Inc.",
 		"tags": ["2d", "graphic_design"]
 	},
 	{
 		"title": "Adobe XD",
+		"author": "Adobe Inc.",
 		"tags": ["2d", "graphic_design"]
 	},
 	{
 		"title": "即时设计",
+		"author": "Js.Design Incm",
 		"tags": ["2d", "graphic_design"]
 	},
 	{
 		"title": "PixelLiner",
+		"author": "橋野みずは",
 		"tags": ["2d", "pixel"]
 	},
 	{
 		"title": "Corel Painter",
+		"author": "Corel",
 		"tags": ["2d"]
 	},
 	{
 		"title": "NodeBox",
+		"author": "Frederik De Bleser, Tom De Smedt",
 		"tags": ["2d"]
 	},
 	{
 		"title": "Paint.NET",
+		"author": "Rick Brewster",
 		"tags": ["2d"]
 	},
 	{
 		"title": "MacPaint",
+		"author": "Apple Inc.",
 		"tags": ["2d"]
 	},
     {
@@ -297,6 +314,7 @@
     },
     {
         "title": "E-on Vue",
+		"author": "Bentley Systems",
         "tags": ["3d"]
     },
     {

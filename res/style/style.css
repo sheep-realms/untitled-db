@@ -87,11 +87,18 @@ body {
 }
 
 .result-title {
+    font-size: 16px;
     font-weight: bold;
+}
+
+.result-meta {
+    margin-top: 2px;
+    color: #666;
+    font-size: 12px;
 }
 
 .result-tags {
     margin-top: 2px;
-    color: #666;
-    font-size: 13px;
+    color: #888;
+    font-size: 12px;
 }

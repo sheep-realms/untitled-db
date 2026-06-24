@@ -451,6 +451,9 @@ function renderResult(result) {
             <div class="result-title">
                 ${item.title}
             </div>
+            <div class="result-meta">
+                ${ item?.author ? item?.author : '' }
+            </div>
             <div class="result-tags">
                 ${item.tags.join(", ")}
             </div>
@@ -517,7 +520,7 @@ async function init() {
                     name: "main",
                     type: "string",
                     map: {
-                        value: "title"
+                        value: ["title", "author"]
                     }
                 }
             ],
