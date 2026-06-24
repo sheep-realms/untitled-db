@@ -14,6 +14,13 @@
     --color-black: #000000;
     --color-white: #ffffff;
 
+    --color-text-primary: var(--color-slate-950);
+    --color-text-regular: var(--color-slate-600);
+    --color-text-secondary: var(--color-slate-400);
+    --color-text-placeholder: var(--color-slate-300);
+
+    --color-card-border: var(--color-slate-200);
+
     --color-button-soild-bg: var(--color-slate-950);
     --color-button-soild-bg-hover: var(--color-slate-700);
     --color-button-soild-text: var(--color-white);
@@ -31,6 +38,12 @@ body {
     padding: 24px;
     font-family: sans-serif;
     overflow-y: scroll;
+    color: var(--color-text-primary);
+    background-color: var(--color-white);
+}
+
+::placeholder {
+    color: var(--color-text-placeholder);
 }
 
 .container {
@@ -41,10 +54,12 @@ body {
 
 .h1-subtitle {
     font-weight: 400;
+    color: var(--color-text-regular);
 }
 
 .h1-value-container {
     font-weight: 300;
+    color: var(--color-text-regular);
 }
 
 .hidden {
@@ -159,8 +174,13 @@ button.outlined:hover,
 .result-info {
     margin-top: 20px;
     margin-bottom: 12px;
-    color: #666;
+    color: var(--color-text-regular);
     font-size: 14px;
+    font-weight: 300;
+}
+
+#result-count {
+    font-weight: 400;
 }
 
 #result-list {
@@ -175,7 +195,7 @@ button.outlined:hover,
     flex: 1;
     min-width: 250px;
     padding: 8px 12px;
-    border: 1px solid #ddd;
+    border: 1px solid var(--color-card-border);
 }
 
 .result-title {
@@ -185,12 +205,12 @@ button.outlined:hover,
 
 .result-meta {
     margin-top: 2px;
-    color: #666;
+    color: var(--color-text-regular);
     font-size: 12px;
 }
 
 .result-tags {
     margin-top: 2px;
-    color: #888;
+    color: var(--color-text-secondary);
     font-size: 12px;
 }
