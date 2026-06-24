@@ -2,391 +2,400 @@
 	{
 		"title": "Easy Paint Tool SAI",
 		"author": "SYSTEMAX",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Adobe Photoshop",
 		"author": "Adobe Inc.",
-		"tags": ["2d", "graphic_design"]
+		"tags": ["paint_2d", "graphic_design"]
 	},
 	{
 		"title": "Clip Studio Paint",
 		"author": "CELSYS",
-		"tags": ["2d", "comic"]
+		"tags": ["animation", "animation_2d", "paint_2d", "comic"]
 	},
 	{
 		"title": "IllustStudio",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "ComicStudio",
-		"tags": ["2d", "comic"]
+		"tags": ["paint_2d", "comic"]
 	},
 	{
 		"title": "Pixia",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "AzPainter2",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Painter",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Adobe Illustrator",
 		"author": "Adobe Inc.",
-		"tags": ["2d", "graphic_design"]
+		"tags": ["paint_2d", "graphic_design"]
 	},
 	{
 		"title": "GIMP",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "FireAlpaca",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "お絵描き掲示板",
-		"tags": ["2d"]
+		"sort_name": "OEkakiKeijiban",
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "AzPainter",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "CGillust",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "お絵描きチャット",
-		"tags": ["2d"]
+		"sort_name": "OEkakiChatto",
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "手書きブログ",
-		"tags": ["2d"]
+		"sort_name": "TegakiBurogu",
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Microsoft Paint",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "PictBear",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "openCanvas",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "PaintShopPro",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Adobe Edge",
 		"author": "Adobe Inc.",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "drawr",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "COMICWORKS",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "AzDrawing",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "SketchBookPro",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "PhotoStudio",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Paintgraphic",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "MediBang Paint",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "NekoPaint",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Inkscape",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "ArtRage",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "AzDrawing2",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Adobe Fireworks",
 		"author": "Adobe Inc.",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "ibisPaint",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "AfterEffects",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "mdiapp",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "GraphicsGale",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Krita",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "こくばん.in",
-		"tags": ["2d"]
+		"sort_name": "KoKuban.in",
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "RETAS STUDIO",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "えもふり・E-mote",
-		"tags": ["2d"]
+		"sort_name": "EmoFuri E-mote",
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "4thPaint",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "コミラボ",
-		"tags": ["2d"]
+		"sort_name": "KomiRabo",
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "pixiv Sketch",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Pixelmator",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Procreate",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Expression",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "PicturePublisher",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Processing",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Live2D Cubism Editor",
-		"tags": ["2d", "live_2d"]
+		"tags": ["animation", "animation_2d", "paint_2d", "live_2d"]
 	},
 	{
-		"title": "ドットピクト",
-		"tags": ["2d"]
+		"title": "dotpict",
+		"tags": ["paint_2d", "pixel"]
 	},
 	{
 		"title": "Aseprite",
 		"author": "Igara Studio S.A.",
-		"tags": ["2d", "pixel"]
+		"tags": ["animation", "animation_2d", "paint_2d", "pixel"]
 	},
 	{
 		"title": "Pastela",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Figma",
 		"author": "Figma, Inc.",
-		"tags": ["2d", "graphic_design"]
+		"tags": ["paint_2d", "graphic_design"]
 	},
 	{
 		"title": "Sketch",
 		"author": "Sketch B.V.",
-		"tags": ["2d", "graphic_design"]
+		"tags": ["paint_2d", "graphic_design"]
 	},
 	{
 		"title": "Axure RP",
 		"author": "Axure Software Solutions, Inc.",
-		"tags": ["2d", "graphic_design"]
+		"tags": ["paint_2d", "graphic_design"]
 	},
 	{
 		"title": "Adobe XD",
 		"author": "Adobe Inc.",
-		"tags": ["2d", "graphic_design"]
+		"tags": ["paint_2d", "graphic_design"]
 	},
 	{
 		"title": "即时设计",
+		"sort_name": "JishiSheji",
 		"author": "Js.Design Incm",
-		"tags": ["2d", "graphic_design"]
+		"tags": ["paint_2d", "graphic_design"]
 	},
 	{
 		"title": "PixelLiner",
 		"author": "橋野みずは",
-		"tags": ["2d", "pixel"]
+		"tags": ["animation", "animation_2d", "paint_2d", "pixel"]
 	},
 	{
 		"title": "Corel Painter",
 		"author": "Corel",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "NodeBox",
 		"author": "Frederik De Bleser, Tom De Smedt",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "Paint.NET",
 		"author": "Rick Brewster",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
 	{
 		"title": "MacPaint",
 		"author": "Apple Inc.",
-		"tags": ["2d"]
+		"tags": ["paint_2d"]
 	},
     {
         "title": "Poser",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "Metasequoia",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "Blender",
-        "tags": ["3d"]
+        "tags": ["animation", "animation_3d", "paint_3d", "open_source"]
     },
     {
         "title": "Shade 3D",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "3dsMax",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "DAZ Studio",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "ZBrush",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "コミPo!",
-        "tags": ["3d"]
+		"sort_name": "KomiPo!",
+        "tags": ["paint_3d"]
     },
     {
         "title": "Maya",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "Lightwave3D",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "六角大王",
-        "tags": ["3d"]
+		"sort_name": "RokkakuDaioo",
+        "tags": ["paint_3d"]
     },
     {
         "title": "E-on Vue",
 		"author": "Bentley Systems",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "SketchUp",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "Cinema 4D",
-        "tags": ["3d"]
+        "tags": ["animation", "animation_3d", "paint_3d"]
     },
     {
         "title": "XSI",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "CARRARA",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "Bryce",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "STRATA",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "Sculptris",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "modo",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "AnimationMaster",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "VistaPro",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "Sunny3D",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "3D-Coat",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "Paint 3D",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "VRoid Studio",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "MagicaVoxel",
-        "tags": ["3d", "voxel"]
+        "tags": ["paint_3d", "voxel", "open_source"]
     },
     {
         "title": "Houdini",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "Softimage",
-        "tags": ["3d"]
+        "tags": ["paint_3d"]
     },
     {
         "title": "FreeCAD",
-        "tags": ["3d"]
+        "tags": ["paint_3d", "open_source"]
     }
 ]

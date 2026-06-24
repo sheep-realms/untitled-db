@@ -1,0 +1,50 @@
+[
+    {
+		"title": "Ajax Animator",
+		"tags": ["animation_2d", "open_source"]
+	},
+	{
+		"title": "Autodesk Animator",
+		"tags": ["animation_2d", "open_source"]
+	},
+	{
+		"title": "Tupi",
+		"tags": ["animation_2d", "open_source"]
+	},
+	{
+		"title": "SWFTools",
+		"tags": ["animation_2d", "open_source"]
+	},
+	{
+		"title": "Pencil2D",
+		"tags": ["animation_2d", "open_source"]
+	},
+	{
+		"title": "Synfig",
+		"tags": ["animation_2d", "open_source"]
+	},
+	{
+		"title": "OpenToonz",
+		"tags": ["animation_2d", "open_source"]
+	},
+    {
+        "title": "Art of Illusion",
+        "tags": ["animation_3d", "open_source"]
+    },
+    {
+        "title": "K-3D",
+        "tags": ["animation_3d", "open_source"]
+    },
+    {
+        "title": "OpenFX",
+        "tags": ["animation_3d", "open_source"]
+    },
+    {
+        "title": "Seamless3d",
+        "tags": ["animation_3d", "open_source"]
+    },
+    {
+        "title": "Toonloop",
+        "tags": ["animation_3d", "open_source"]
+    }
+]

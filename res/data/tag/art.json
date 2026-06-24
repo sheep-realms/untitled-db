@@ -4,31 +4,46 @@
         "src": "paint.json"
     },
     {
-        "name": "2d",
-        "parent": "paint"
+        "name": "paint_2d",
+        "parent": ["paint"]
     },
     {
         "name": "comic",
-        "parent": "2d"
+        "parent": "paint_2d"
     },
     {
         "name": "graphic_design",
-        "parent": "2d"
+        "parent": "paint_2d"
     },
     {
         "name": "live_2d",
-        "parent": "2d"
+        "parent": ["animation_2d", "paint_2d"]
     },
     {
         "name": "pixel",
-        "parent": "2d"
+        "parent": "paint_2d"
     },
     {
-        "name": "3d",
+        "name": "paint_3d",
         "parent": "paint"
     },
     {
         "name": "voxel",
-        "parent": "3d"
+        "parent": "paint_3d"
+    },
+    {
+        "name": "animation",
+        "src": "animation.json"
+    },
+    {
+        "name": "animation_2d",
+        "parent": "animation"
+    },
+    {
+        "name": "animation_3d",
+        "parent": "animation"
+    },
+    {
+        "name": "open_source"
     }
 ]

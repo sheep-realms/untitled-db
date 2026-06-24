@@ -12,6 +12,7 @@ const state = {
     tags: [],
     tagMap: new Map(),
     childrenMap: new Map(),
+    depthMap: new Map(),
 
     data: [],
 
@@ -79,22 +80,149 @@ function buildTagRelations() {
             continue;
         }
 
-        if (!state.childrenMap.has(tag.parent)) {
-            state.childrenMap.set(tag.parent, []);
-        }
+        const parents =
+            Array.isArray(tag.parent)
+                ? tag.parent
+                : [tag.parent];
 
-        state.childrenMap.get(tag.parent).push(tag);
+        for (const parent of parents) {
+
+            if (
+                !state.childrenMap.has(
+                    parent
+                )
+            ) {
+                state.childrenMap.set(
+                    parent,
+                    []
+                );
+            }
+
+            state.childrenMap
+                .get(parent)
+                .push(tag);
+        }
     }
 
-    for (const list of state.childrenMap.values()) {
+    for (
+        const list
+        of state.childrenMap.values()
+    ) {
 
-        list.sort((a, b) => {
-            return a.name.localeCompare(
+        list.sort((a, b) =>
+            a.name.localeCompare(
                 b.name,
                 "zh-CN"
-            );
-        });
+            )
+        );
     }
+}
+
+function buildDepthMap() {
+    state.depthMap.clear();
+
+    const queue = [];
+
+    for (const tag of state.tags) {
+
+        if (!tag.parent) {
+
+            state.depthMap.set(
+                tag.name,
+                0
+            );
+
+            queue.push(tag);
+        }
+    }
+
+    while (queue.length) {
+
+        const current =
+            queue.shift();
+
+        const currentDepth =
+            state.depthMap.get(
+                current.name
+            );
+
+        const children =
+            state.childrenMap.get(
+                current.name
+            ) ?? [];
+
+        for (const child of children) {
+
+            const nextDepth =
+                currentDepth + 1;
+
+            const oldDepth =
+                state.depthMap.get(
+                    child.name
+                );
+
+            if (
+                oldDepth == null ||
+                nextDepth > oldDepth
+            ) {
+
+                state.depthMap.set(
+                    child.name,
+                    nextDepth
+                );
+
+                queue.push(child);
+            }
+        }
+    }
+}
+
+function buildVisibleGroups() {
+    const groups =
+        new Map();
+
+    const visibleTags =
+        getVisibleTags();
+
+    for (
+        const tag
+        of visibleTags
+    ) {
+
+        const depth =
+            state.depthMap.get(
+                tag.name
+            ) ?? 0;
+
+        if (
+            !groups.has(depth)
+        ) {
+
+            groups.set(
+                depth,
+                []
+            );
+        }
+
+        groups
+            .get(depth)
+            .push(tag);
+    }
+
+    for (
+        const tags
+        of groups.values()
+    ) {
+
+        tags.sort((a, b) =>
+            a.name.localeCompare(
+                b.name,
+                "zh-CN"
+            )
+        );
+    }
+
+    return groups;
 }
 
 function getRootTags() {
@@ -109,20 +237,43 @@ function getRootTags() {
         });
 }
 
-function getParentTags(tagName) {
+function getParentTags(
+    tagName,
+    result = new Set()
+) {
 
-    const result = [];
+    const current =
+        state.tagMap.get(tagName);
 
-    let current = state.tagMap.get(tagName);
-
-    while (current?.parent) {
-
-        result.push(current.parent);
-
-        current = state.tagMap.get(current.parent);
+    if (
+        !current ||
+        !current.parent
+    ) {
+        return [...result];
     }
 
-    return result;
+    const parents =
+        Array.isArray(current.parent)
+            ? current.parent
+            : [current.parent];
+
+    for (const parent of parents) {
+
+        if (
+            result.has(parent)
+        ) {
+            continue;
+        }
+
+        result.add(parent);
+
+        getParentTags(
+            parent,
+            result
+        );
+    }
+
+    return [...result];
 }
 
 function getAllDescendants(tagName) {
@@ -204,6 +355,38 @@ function getEffectiveTags() {
     );
 }
 
+function getVisibleTags() {
+    const result = [];
+
+    for (const tag of state.tags) {
+
+        if (!tag.parent) {
+
+            result.push(tag);
+
+            continue;
+        }
+
+        const parents =
+            Array.isArray(tag.parent)
+                ? tag.parent
+                : [tag.parent];
+
+        const visible =
+            parents.some(parent =>
+                state.selectedTags.has(
+                    parent
+                )
+            );
+
+        if (visible) {
+            result.push(tag);
+        }
+    }
+
+    return result;
+}
+
 async function loadAllData(tags) {
 
     const result = [];
@@ -244,8 +427,8 @@ async function loadAllData(tags) {
     }
 
     result.sort((a, b) => {
-        return a.title.localeCompare(
-            b.title,
+        return (a.sort_name ?? a.title).localeCompare(
+            b.sort_name ?? b.title,
             "zh-CN"
         );
     });
@@ -253,138 +436,10 @@ async function loadAllData(tags) {
     return result;
 }
 
-function renderTagGroup(
-    tags,
-    parentName = null
-) {
-
-    if (
-        parentName &&
-        !state.selectedTags.has(
-            parentName
-        )
-    ) {
-        return;
-    }
-
-    const group =
-        document.createElement("div");
-
-    group.className =
-        "tag-group";
-
-    const buttons =
-        document.createElement("div");
-
-    buttons.className =
-        "tag-buttons";
-
-    for (const tag of tags) {
-
-        const selected =
-            state.selectedTags.has(
-                tag.name
-            );
-
-        const btn =
-            document.createElement(
-                "button"
-            );
-
-        btn.className =
-            "tag-btn";
-
-        btn.textContent =
-            tag.name;
-
-        if (selected) {
-            btn.classList.add(
-                "active"
-            );
-        }
-
-        if (
-            selected &&
-            hasSelectedChild(
-                tag.name
-            )
-        ) {
-            btn.classList.add(
-                "covered"
-            );
-        }
-
-        btn.addEventListener(
-            "click",
-            () => {
-
-                if (selected) {
-
-                    state.selectedTags.delete(
-                        tag.name
-                    );
-
-                    const descendants =
-                        getAllDescendants(
-                            tag.name
-                        );
-
-                    for (
-                        const descendant
-                        of descendants
-                    ) {
-                        state.selectedTags.delete(
-                            descendant
-                        );
-                    }
-
-                } else {
-
-                    state.selectedTags.add(
-                        tag.name
-                    );
-                }
-
-                renderTagSelector();
-                updateFilterFromUI();
-            }
-        );
-
-        buttons.appendChild(btn);
-    }
-
-    group.appendChild(buttons);
-
-    dom.tagGroups.appendChild(group);
-
-    for (const tag of tags) {
-
-        const children =
-            state.childrenMap.get(
-                tag.name
-            );
-
-        if (
-            children &&
-            state.selectedTags.has(
-                tag.name
-            )
-        ) {
-            renderTagGroup(
-                children,
-                tag.name
-            );
-        }
-    }
-}
-
 function renderTagSelector() {
-
     dom.tagGroups.innerHTML = "";
 
-    renderTagGroup(
-        getRootTags()
-    );
+    renderTagGroup(getRootTags());
 }
 
 function buildFilterText() {
@@ -397,12 +452,9 @@ function buildFilterText() {
         parts.push(keyword);
     }
 
-    for (
-        const tag
-        of getEffectiveTags()
-    ) {
+    for (const tag of getEffectiveTags()) {
         parts.push(
-            `tag:"${tag}"`
+            `tag:${tag}`
         );
     }
 
@@ -410,27 +462,17 @@ function buildFilterText() {
 }
 
 function updateFilterFromUI() {
-
-    const query =
-        buildFilterText();
-
-    dom.queryInput.value =
-        query;
-    
+    const query =buildFilterText();
+    dom.queryInput.value = query;
     runFilter(query);
 }
 
 function runFilter(query) {
-    const result =
-        state.filter.filter(
-            query
-        );
-
+    const result = state.filter.filter(query);
     renderResult(result);
 }
 
 function renderResult(result) {
-
     dom.resultCount.textContent =
         result.length;
 
@@ -486,6 +528,172 @@ function switchMode() {
             : "";
 }
 
+function hasVisibleParent(tagName) {
+    const tag =
+        state.tagMap.get(tagName);
+
+    if (
+        !tag ||
+        !tag.parent
+    ) {
+        return false;
+    }
+
+    const parents =
+        Array.isArray(tag.parent)
+            ? tag.parent
+            : [tag.parent];
+
+    return parents.some(parent =>
+        state.selectedTags.has(parent)
+    );
+}
+
+function removeInvisibleDescendants(tagName) {
+    const children =
+        state.childrenMap.get(tagName);
+
+    if (!children) {
+        return;
+    }
+
+    for (const child of children) {
+
+        if (
+            !hasVisibleParent(
+                child.name
+            )
+        ) {
+
+            state.selectedTags.delete(
+                child.name
+            );
+
+            removeInvisibleDescendants(
+                child.name
+            );
+        }
+    }
+}
+
+function renderTagSelector() {
+    dom.tagGroups.innerHTML = "";
+
+    const groups =
+        buildVisibleGroups();
+
+    const depths =
+        [...groups.keys()]
+            .sort(
+                (a, b) => a - b
+            );
+
+    for (
+        const depth
+        of depths
+    ) {
+
+        const group =
+            document.createElement(
+                "div"
+            );
+
+        group.className =
+            "tag-group";
+
+        const buttons =
+            document.createElement(
+                "div"
+            );
+
+        buttons.className =
+            "tag-buttons";
+
+        const tags =
+            groups.get(depth);
+
+        for (
+            const tag
+            of tags
+        ) {
+
+            const selected =
+                state.selectedTags.has(
+                    tag.name
+                );
+
+            const btn =
+                document.createElement(
+                    "button"
+                );
+
+            btn.className =
+                "tag-btn";
+
+            btn.textContent =
+                tag.name;
+
+            if (selected) {
+
+                btn.classList.add(
+                    "active"
+                );
+            }
+
+            if (
+                selected &&
+                hasSelectedChild(
+                    tag.name
+                )
+            ) {
+
+                btn.classList.add(
+                    "covered"
+                );
+            }
+
+            btn.addEventListener(
+                "click",
+                () => {
+
+                    if (selected) {
+
+                        state.selectedTags.delete(
+                            tag.name
+                        );
+
+                        removeInvisibleDescendants(
+                            tag.name
+                        );
+
+                    } else {
+
+                        state.selectedTags.add(
+                            tag.name
+                        );
+                    }
+
+                    renderTagSelector();
+
+                    updateFilterFromUI();
+                }
+            );
+
+            buttons.appendChild(
+                btn
+            );
+        }
+
+        group.appendChild(
+            buttons
+        );
+
+        dom.tagGroups.appendChild(
+            group
+        );
+    }
+}
+
 async function init() {
 
     state.tags =
@@ -498,6 +706,7 @@ async function init() {
     );
 
     buildTagRelations();
+    buildDepthMap();
 
     state.data =
         await loadAllData(
