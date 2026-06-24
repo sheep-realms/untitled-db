@@ -480,10 +480,10 @@ function switchMode() {
         !state.customMode
     );
 
-    dom.toggleMode.textContent =
+    dom.toggleMode.className = 
         state.customMode
-            ? "Back"
-            : "Custom Search Statement";
+            ? "soild"
+            : "";
 }
 
 async function init() {

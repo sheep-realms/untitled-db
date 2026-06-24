@@ -1,3 +1,31 @@
+:root {
+    --color-slate-50: #f8fafc;
+    --color-slate-100: #f1f5f9;
+    --color-slate-200: #e2e8f0;
+    --color-slate-300: #cbd5e1;
+    --color-slate-400: #94a3b8;
+    --color-slate-500: #64748b;
+    --color-slate-600: #475569;
+    --color-slate-700: #334155;
+    --color-slate-800: #1e293b;
+    --color-slate-900: #0f172a;
+    --color-slate-950: #020617;
+
+    --color-black: #000000;
+    --color-white: #ffffff;
+
+    --color-button-soild-bg: var(--color-slate-950);
+    --color-button-soild-bg-hover: var(--color-slate-700);
+    --color-button-soild-text: var(--color-white);
+    --color-button-filled-bg: var(--color-slate-50);
+    --color-button-filled-bg-hover: var(--color-slate-100);
+    --color-button-filled-text: var(--color-slate-950);
+
+    --color-input-border: var(--color-slate-300);
+    --color-input-border-hover: var(--color-slate-400);
+    --color-input-border-focus: var(--color-slate-950);
+}
+
 body {
     margin: 0;
     padding: 24px;
@@ -41,6 +69,77 @@ body {
     padding: 8px;
 }
 
+input[type="text"],
+textarea {
+    background-color: var(--color-white);
+    border: 1px solid var(--color-input-border);
+    outline: none;
+}
+
+input[type="text"]:hover,
+textarea:hover {
+    border-color: var(--color-input-border-hover);
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: var(--color-input-border-focus);
+    outline: 1px solid var(--color-input-border-focus);
+}
+
+button {
+    appearance: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border: 1px solid;
+    border-color: var(--color-button-filled-bg);
+    background-color: var(--color-button-filled-bg);
+    color: var(--color-button-filled-text);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--color-button-soild-bg);
+}
+
+button:hover {
+    border-color: var(--color-button-filled-bg-hover);
+    background-color: var(--color-button-filled-bg-hover);
+    color: var(--color-button-filled-text);
+}
+
+button.soild,
+.tag-btn.active {
+    border-color: var(--color-button-soild-bg);
+    background-color: var(--color-button-soild-bg);
+    color: var(--color-button-soild-text);
+}
+
+button.soild:hover,
+.tag-btn.active:hover {
+    border-color: var(--color-button-soild-bg-hover);
+    background-color: var(--color-button-soild-bg-hover);
+    color: var(--color-button-soild-text);
+}
+
+button.soild:focus-visible,
+.tag-btn.active:focus-visible {
+    outline: 2px solid var(--color-slate-400);
+}
+
+button.outlined,
+.tag-btn.active.covered {
+    border-color: var(--color-button-soild-bg);
+    background-color: transparent;
+    color: var(--color-button-filled-text);
+}
+
+button.outlined:hover,
+.tag-btn.active.covered:hover {
+    border-color: var(--color-button-soild-bg);
+    background-color: var(--color-button-filled-bg);
+    color: var(--color-button-filled-text);
+}
+
 .tag-group {
     margin-top: 12px;
 }
@@ -57,18 +156,11 @@ body {
     gap: 8px;
 }
 
-.tag-btn {
-    padding: 6px 12px;
-    cursor: pointer;
-}
-
-.tag-btn.active {
-    font-weight: bold;
-}
-
 .result-info {
     margin-top: 20px;
     margin-bottom: 12px;
+    color: #666;
+    font-size: 14px;
 }
 
 #result-list {
