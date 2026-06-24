@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | Authoring Tools DB</title>
+
+    <link rel="stylesheet" href="res/style/style.css">
+    <script src="res/class/EchoLiveTools.js"></script>
+    <script src="res/class/DataFilter.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>
+        Authoring Tools DB
+        <span class="h1-subtitle">/ Search</span>
+        <span class="h1-value-container">[<span id="h1-value"></span>]</span>
+    </h1>
+
+    <div class="toolbar">
+        <button id="toggle-mode">
+            Custom Search Statement
+        </button>
+    </div>
+
+    <div id="normal-search">
+
+        <input
+            id="keyword-input"
+            type="text"
+            placeholder="Keyword..."
+        >
+
+        <div id="tag-groups"></div>
+
+    </div>
+
+    <div id="advanced-search" class="hidden">
+
+        <textarea
+            id="query-input"
+            placeholder="Search Statement..."
+        ></textarea>
+
+    </div>
+
+    <div class="result-info">
+        total of <span id="result-count">0</span> result(s)
+    </div>
+
+    <div id="result-list"></div>
+
+</div>
+
+<script src="res/script/app.js"></script>
+
+</body>
+</html>

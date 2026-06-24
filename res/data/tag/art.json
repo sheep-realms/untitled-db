@@ -1,0 +1,34 @@
+[
+    {
+        "name": "paint",
+        "src": "paint.json"
+    },
+    {
+        "name": "2d",
+        "parent": "paint"
+    },
+    {
+        "name": "comic",
+        "parent": "2d"
+    },
+    {
+        "name": "graphic_design",
+        "parent": "2d"
+    },
+    {
+        "name": "live_2d",
+        "parent": "2d"
+    },
+    {
+        "name": "pixel",
+        "parent": "2d"
+    },
+    {
+        "name": "3d",
+        "parent": "paint"
+    },
+    {
+        "name": "voxel",
+        "parent": "3d"
+    }
+]

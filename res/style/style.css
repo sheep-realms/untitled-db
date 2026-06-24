@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 24px;
+    font-family: sans-serif;
+    overflow-y: scroll;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 35vh;
+}
+
+.h1-subtitle {
+    font-weight: 400;
+}
+
+.h1-value-container {
+    font-weight: 300;
+}
+
+.hidden {
+    display: none;
+}
+
+.toolbar {
+    margin-bottom: 12px;
+}
+
+#keyword-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+#query-input {
+    width: 100%;
+    min-height: 120px;
+    box-sizing: border-box;
+    resize: vertical;
+    padding: 8px;
+}
+
+.tag-group {
+    margin-top: 12px;
+}
+
+.tag-group-title {
+    margin-bottom: 6px;
+    font-size: 13px;
+    color: #666;
+}
+
+.tag-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-btn {
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.tag-btn.active {
+    font-weight: bold;
+}
+
+.result-info {
+    margin-top: 20px;
+    margin-bottom: 12px;
+}
+
+#result-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.result-item {
+    flex: 1;
+    min-width: 250px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+}
+
+.result-title {
+    font-weight: bold;
+}
+
+.result-tags {
+    margin-top: 2px;
+    color: #666;
+    font-size: 13px;
+}

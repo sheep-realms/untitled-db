@@ -1,0 +1,374 @@
+[
+	{
+		"title": "Easy Paint Tool SAI",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Adobe Photoshop",
+		"tags": ["2d", "graphic_design"]
+	},
+	{
+		"title": "Clip Studio Paint",
+		"tags": ["2d", "comic"]
+	},
+	{
+		"title": "IllustStudio",
+		"tags": ["2d"]
+	},
+	{
+		"title": "ComicStudio",
+		"tags": ["2d", "comic"]
+	},
+	{
+		"title": "Pixia",
+		"tags": ["2d"]
+	},
+	{
+		"title": "AzPainter2",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Painter",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Adobe Illustrator",
+		"tags": ["2d", "graphic_design"]
+	},
+	{
+		"title": "GIMP",
+		"tags": ["2d"]
+	},
+	{
+		"title": "FireAlpaca",
+		"tags": ["2d"]
+	},
+	{
+		"title": "お絵描き掲示板",
+		"tags": ["2d"]
+	},
+	{
+		"title": "AzPainter",
+		"tags": ["2d"]
+	},
+	{
+		"title": "CGillust",
+		"tags": ["2d"]
+	},
+	{
+		"title": "お絵描きチャット",
+		"tags": ["2d"]
+	},
+	{
+		"title": "手書きブログ",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Microsoft Paint",
+		"tags": ["2d"]
+	},
+	{
+		"title": "PictBear",
+		"tags": ["2d"]
+	},
+	{
+		"title": "openCanvas",
+		"tags": ["2d"]
+	},
+	{
+		"title": "PaintShopPro",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Adobe Edge",
+		"tags": ["2d"]
+	},
+	{
+		"title": "drawr",
+		"tags": ["2d"]
+	},
+	{
+		"title": "COMICWORKS",
+		"tags": ["2d"]
+	},
+	{
+		"title": "AzDrawing",
+		"tags": ["2d"]
+	},
+	{
+		"title": "SketchBookPro",
+		"tags": ["2d"]
+	},
+	{
+		"title": "PhotoStudio",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Paintgraphic",
+		"tags": ["2d"]
+	},
+	{
+		"title": "MediBang Paint",
+		"tags": ["2d"]
+	},
+	{
+		"title": "NekoPaint",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Inkscape",
+		"tags": ["2d"]
+	},
+	{
+		"title": "ArtRage",
+		"tags": ["2d"]
+	},
+	{
+		"title": "AzDrawing2",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Adobe Fireworks",
+		"tags": ["2d"]
+	},
+	{
+		"title": "ibisPaint",
+		"tags": ["2d"]
+	},
+	{
+		"title": "AfterEffects",
+		"tags": ["2d"]
+	},
+	{
+		"title": "mdiapp",
+		"tags": ["2d"]
+	},
+	{
+		"title": "GraphicsGale",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Krita",
+		"tags": ["2d"]
+	},
+	{
+		"title": "こくばん.in",
+		"tags": ["2d"]
+	},
+	{
+		"title": "RETAS STUDIO",
+		"tags": ["2d"]
+	},
+	{
+		"title": "えもふり・E-mote",
+		"tags": ["2d"]
+	},
+	{
+		"title": "4thPaint",
+		"tags": ["2d"]
+	},
+	{
+		"title": "コミラボ",
+		"tags": ["2d"]
+	},
+	{
+		"title": "pixiv Sketch",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Pixelmator",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Procreate",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Expression",
+		"tags": ["2d"]
+	},
+	{
+		"title": "PicturePublisher",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Processing",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Live2D Cubism Editor",
+		"tags": ["2d", "live_2d"]
+	},
+	{
+		"title": "ドットピクト",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Aseprite",
+		"tags": ["2d", "pixel"]
+	},
+	{
+		"title": "Pastela",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Figma",
+		"tags": ["2d", "graphic_design"]
+	},
+	{
+		"title": "Sketch",
+		"tags": ["2d", "graphic_design"]
+	},
+	{
+		"title": "Axure",
+		"tags": ["2d", "graphic_design"]
+	},
+	{
+		"title": "Adobe XD",
+		"tags": ["2d", "graphic_design"]
+	},
+	{
+		"title": "即时设计",
+		"tags": ["2d", "graphic_design"]
+	},
+	{
+		"title": "PixelLiner",
+		"tags": ["2d", "pixel"]
+	},
+	{
+		"title": "Corel Painter",
+		"tags": ["2d"]
+	},
+	{
+		"title": "NodeBox",
+		"tags": ["2d"]
+	},
+	{
+		"title": "Paint.NET",
+		"tags": ["2d"]
+	},
+	{
+		"title": "MacPaint",
+		"tags": ["2d"]
+	},
+    {
+        "title": "Poser",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Metasequoia",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Blender",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Shade 3D",
+        "tags": ["3d"]
+    },
+    {
+        "title": "3dsMax",
+        "tags": ["3d"]
+    },
+    {
+        "title": "DAZ Studio",
+        "tags": ["3d"]
+    },
+    {
+        "title": "ZBrush",
+        "tags": ["3d"]
+    },
+    {
+        "title": "コミPo!",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Maya",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Lightwave3D",
+        "tags": ["3d"]
+    },
+    {
+        "title": "六角大王",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Vue",
+        "tags": ["3d"]
+    },
+    {
+        "title": "SketchUp",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Cinema 4D",
+        "tags": ["3d"]
+    },
+    {
+        "title": "XSI",
+        "tags": ["3d"]
+    },
+    {
+        "title": "CARRARA",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Bryce",
+        "tags": ["3d"]
+    },
+    {
+        "title": "STRATA",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Sculptris",
+        "tags": ["3d"]
+    },
+    {
+        "title": "modo",
+        "tags": ["3d"]
+    },
+    {
+        "title": "AnimationMaster",
+        "tags": ["3d"]
+    },
+    {
+        "title": "VistaPro",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Sunny3D",
+        "tags": ["3d"]
+    },
+    {
+        "title": "3D-Coat",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Paint 3D",
+        "tags": ["3d"]
+    },
+    {
+        "title": "VRoid Studio",
+        "tags": ["3d"]
+    },
+    {
+        "title": "MagicaVoxel",
+        "tags": ["3d", "voxel"]
+    },
+    {
+        "title": "Houdini",
+        "tags": ["3d"]
+    },
+    {
+        "title": "Softimage",
+        "tags": ["3d"]
+    },
+    {
+        "title": "FreeCAD",
+        "tags": ["3d"]
+    }
+]
