@@ -42,6 +42,11 @@ body {
     background-color: var(--color-white);
 }
 
+hr {
+    border: none;
+    border-top: 1px solid var(--color-card-border);
+}
+
 ::placeholder {
     color: var(--color-text-placeholder);
 }
@@ -156,7 +161,7 @@ button.outlined:hover,
 }
 
 .tag-group {
-    margin-top: 12px;
+    margin-top: 16px;
 }
 
 .tag-group-title {
@@ -169,6 +174,11 @@ button.outlined:hover,
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+}
+
+.tag-split {
+    background-color: var(--color-card-border);
+    width: 1px;
 }
 
 .result-info {
@@ -213,4 +223,8 @@ button.outlined:hover,
     margin-top: 2px;
     color: var(--color-text-secondary);
     font-size: 12px;
+}
+
+.footer-hr {
+    margin-top: 16px;
 }

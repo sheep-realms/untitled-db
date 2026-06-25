@@ -145,10 +145,6 @@
 		"tags": ["paint_2d"]
 	},
 	{
-		"title": "AfterEffects",
-		"tags": ["paint_2d"]
-	},
-	{
 		"title": "mdiapp",
 		"tags": ["paint_2d"]
 	},
@@ -167,7 +163,7 @@
 	},
 	{
 		"title": "RETAS STUDIO",
-		"tags": ["paint_2d"]
+		"tags": ["animation", "animation_2d", "paint_2d"]
 	},
 	{
 		"title": "えもふり・E-mote",
@@ -213,12 +209,13 @@
 	},
 	{
 		"title": "dotpict",
+		"author": "dotpict LLC",
 		"tags": ["paint_2d", "pixel"]
 	},
 	{
 		"title": "Aseprite",
 		"author": "Igara Studio S.A.",
-		"tags": ["animation", "animation_2d", "paint_2d", "pixel"]
+		"tags": ["animation", "animation_2d", "paint_2d", "pixel", "open_source"]
 	},
 	{
 		"title": "Pastela",
@@ -253,7 +250,7 @@
 	{
 		"title": "PixelLiner",
 		"author": "橋野みずは",
-		"tags": ["animation", "animation_2d", "paint_2d", "pixel"]
+		"tags": ["animation", "animation_2d", "paint_2d", "pixel", "game_derivative"]
 	},
 	{
 		"title": "Corel Painter",
@@ -275,6 +272,11 @@
 		"author": "Apple Inc.",
 		"tags": ["paint_2d"]
 	},
+	{
+		"title": "MCSkin3D",
+		"author": "Paril",
+		"tags": ["paint_2d", "pixel", "game_derivative", "open_source"]
+	},
     {
         "title": "Poser",
         "tags": ["paint_3d"]
@@ -292,8 +294,9 @@
         "tags": ["paint_3d"]
     },
     {
-        "title": "3dsMax",
-        "tags": ["paint_3d"]
+        "title": "Autodesk 3dsMax",
+		"author": "Autodesk, Inc.",
+        "tags": ["animation", "animation_3d", "paint_3d"]
     },
     {
         "title": "DAZ Studio",
@@ -309,12 +312,13 @@
         "tags": ["paint_3d"]
     },
     {
-        "title": "Maya",
-        "tags": ["paint_3d"]
+        "title": "Autodesk Maya",
+		"author": "Autodesk, Inc.",
+        "tags": ["animation", "animation_3d", "paint_3d"]
     },
     {
-        "title": "Lightwave3D",
-        "tags": ["paint_3d"]
+        "title": "Lightwave 3D",
+        "tags": ["animation", "animation_3d", "paint_3d"]
     },
     {
         "title": "六角大王",
@@ -332,6 +336,7 @@
     },
     {
         "title": "Cinema 4D",
+		"author": "Maxon Computer",
         "tags": ["animation", "animation_3d", "paint_3d"]
     },
     {
@@ -339,16 +344,16 @@
         "tags": ["paint_3d"]
     },
     {
-        "title": "CARRARA",
-        "tags": ["paint_3d"]
+        "title": "Carrara",
+        "tags": ["animation", "animation_3d", "paint_3d"]
     },
     {
         "title": "Bryce",
-        "tags": ["paint_3d"]
+        "tags": ["animation", "animation_3d", "paint_3d"]
     },
     {
-        "title": "STRATA",
-        "tags": ["paint_3d"]
+        "title": "Strata",
+        "tags": ["animation", "animation_3d", "paint_3d"]
     },
     {
         "title": "Sculptris",
@@ -391,11 +396,21 @@
         "tags": ["paint_3d"]
     },
     {
-        "title": "Softimage",
-        "tags": ["paint_3d"]
+        "title": "Autodesk Softimage",
+		"author": "Autodesk, Inc.",
+        "tags": ["animation", "animation_3d", "paint_3d"]
     },
     {
         "title": "FreeCAD",
         "tags": ["paint_3d", "open_source"]
+    },
+    {
+        "title": "Blockbench",
+		"author": "JannisX11",
+        "tags": ["paint_3d", "pixel", "game_derivative", "open_source"]
+    },
+    {
+        "title": "DesignDoll",
+        "tags": ["paint_3d"]
     }
 ]

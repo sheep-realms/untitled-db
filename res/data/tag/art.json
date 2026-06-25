@@ -44,6 +44,11 @@
         "parent": "animation"
     },
     {
-        "name": "open_source"
+        "name": "game_derivative",
+        "additional": true
+    },
+    {
+        "name": "open_source",
+        "additional": true
     }
 ]

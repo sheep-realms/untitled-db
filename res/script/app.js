@@ -387,6 +387,10 @@ function getVisibleTags() {
     return result;
 }
 
+function getChildTags(tagName) {
+    return state.tags.filter(e => e.parent === tagName || e.parent?.includes(tagName));
+}
+
 async function loadAllData(tags) {
 
     const result = [];
@@ -434,12 +438,6 @@ async function loadAllData(tags) {
     });
 
     return result;
-}
-
-function renderTagSelector() {
-    dom.tagGroups.innerHTML = "";
-
-    renderTagGroup(getRootTags());
 }
 
 function buildFilterText() {
@@ -508,70 +506,29 @@ function renderResult(result) {
 }
 
 function switchMode() {
-
-    state.customMode =
-        !state.customMode;
-
-    dom.normalSearch.classList.toggle(
-        "hidden",
-        state.customMode
-    );
-
-    dom.advancedSearch.classList.toggle(
-        "hidden",
-        !state.customMode
-    );
-
-    dom.toggleMode.className = 
-        state.customMode
-            ? "soild"
-            : "";
+    state.customMode = !state.customMode;
+    dom.normalSearch.classList.toggle("hidden", state.customMode);
+    dom.advancedSearch.classList.toggle("hidden", !state.customMode);
+    dom.toggleMode.className = state.customMode ? "soild" : "";
 }
 
 function hasVisibleParent(tagName) {
-    const tag =
-        state.tagMap.get(tagName);
+    const tag = state.tagMap.get(tagName);
+    if (!tag || !tag.parent) return false;
 
-    if (
-        !tag ||
-        !tag.parent
-    ) {
-        return false;
-    }
+    const parents = Array.isArray(tag.parent) ? tag.parent : [tag.parent];
 
-    const parents =
-        Array.isArray(tag.parent)
-            ? tag.parent
-            : [tag.parent];
-
-    return parents.some(parent =>
-        state.selectedTags.has(parent)
-    );
+    return parents.some(parent => state.selectedTags.has(parent));
 }
 
 function removeInvisibleDescendants(tagName) {
-    const children =
-        state.childrenMap.get(tagName);
-
-    if (!children) {
-        return;
-    }
+    const children = state.childrenMap.get(tagName);
+    if (!children) return;
 
     for (const child of children) {
-
-        if (
-            !hasVisibleParent(
-                child.name
-            )
-        ) {
-
-            state.selectedTags.delete(
-                child.name
-            );
-
-            removeInvisibleDescendants(
-                child.name
-            );
+        if (!hasVisibleParent(child.name)) {
+            state.selectedTags.delete(child.name);
+            removeInvisibleDescendants(child.name);
         }
     }
 }
@@ -579,192 +536,135 @@ function removeInvisibleDescendants(tagName) {
 function renderTagSelector() {
     dom.tagGroups.innerHTML = "";
 
-    const groups =
-        buildVisibleGroups();
+    const groups = buildVisibleGroups();
+    const depths = [...groups.keys()].sort((a, b) => a - b);
 
-    const depths =
-        [...groups.keys()]
-            .sort(
-                (a, b) => a - b
-            );
+    for (const depth of depths) {
+        const group = document.createElement("div");
+        group.className = "tag-group";
 
-    for (
-        const depth
-        of depths
-    ) {
+        const buttons = document.createElement("div");
+        buttons.className = "tag-buttons";
+        
+        function _renderSubTagSelector(tags) {
+            for (const tag of tags) {
+                const selected = state.selectedTags.has(tag.name);
+                const btn = document.createElement("button");
+                btn.className = "tag-btn";
+                btn.textContent = tag.name;
 
-        const group =
-            document.createElement(
-                "div"
-            );
-
-        group.className =
-            "tag-group";
-
-        const buttons =
-            document.createElement(
-                "div"
-            );
-
-        buttons.className =
-            "tag-buttons";
-
-        const tags =
-            groups.get(depth);
-
-        for (
-            const tag
-            of tags
-        ) {
-
-            const selected =
-                state.selectedTags.has(
-                    tag.name
-                );
-
-            const btn =
-                document.createElement(
-                    "button"
-                );
-
-            btn.className =
-                "tag-btn";
-
-            btn.textContent =
-                tag.name;
-
-            if (selected) {
-
-                btn.classList.add(
-                    "active"
-                );
-            }
-
-            if (
-                selected &&
-                hasSelectedChild(
-                    tag.name
-                )
-            ) {
-
-                btn.classList.add(
-                    "covered"
-                );
-            }
-
-            btn.addEventListener(
-                "click",
-                () => {
-
-                    if (selected) {
-
-                        state.selectedTags.delete(
-                            tag.name
-                        );
-
-                        removeInvisibleDescendants(
-                            tag.name
-                        );
-
-                    } else {
-
-                        state.selectedTags.add(
-                            tag.name
-                        );
-                    }
-
-                    renderTagSelector();
-
-                    updateFilterFromUI();
+                if (selected) {
+                    btn.classList.add("active");
                 }
-            );
 
-            buttons.appendChild(
-                btn
-            );
+                if (selected && hasSelectedChild(tag.name)) {
+                    btn.classList.add("covered");
+                }
+
+                btn.addEventListener("click", () => {
+                        if (selected) {
+                            state.selectedTags.delete(tag.name);
+                            removeInvisibleDescendants(tag.name);
+                        } else {
+                            state.selectedTags.add(tag.name);
+                        }
+
+                        renderTagSelector();
+                        updateFilterFromUI();
+                    }
+                );
+
+                buttons.appendChild(btn);
+            }
         }
 
-        group.appendChild(
-            buttons
-        );
+        const tags = groups.get(depth);
 
-        dom.tagGroups.appendChild(
-            group
-        );
+        // let hasChildTags = [];
+        // let noChildTags = [];
+
+        // for (const tag of tags) {
+        //     if (getChildTags(tag.name).length > 0) {
+        //         hasChildTags.push(tag);
+        //     } else {
+        //         noChildTags.push(tag);
+        //     }
+        // }
+
+        let notAdditionalTags = [];
+        let additionalTags = [];
+
+        for (const tag of tags) {
+            if (tag.additional) {
+                additionalTags.push(tag);
+            } else {
+                notAdditionalTags.push(tag);
+            }
+        }
+
+        _renderSubTagSelector(notAdditionalTags);
+
+        if (notAdditionalTags.length > 0 && additionalTags.length > 0) {
+            const split = document.createElement("span");
+            split.className = "tag-split";
+            buttons.appendChild(split);
+        }
+
+        _renderSubTagSelector(additionalTags);
+
+        group.appendChild(buttons);
+        dom.tagGroups.appendChild(group);
     }
 }
 
 async function init() {
+    state.tags = await loadJson(`res/data/tag/${DB_NAME}.json`);
 
-    state.tags =
-        await loadJson(
-            `res/data/tag/${DB_NAME}.json`
-        );
-
-    buildTagMap(
-        state.tags
-    );
+    buildTagMap(state.tags);
 
     buildTagRelations();
     buildDepthMap();
 
-    state.data =
-        await loadAllData(
-            state.tags
-        );
+    state.data = await loadAllData(state.tags);
 
-    state.filter =
-        new DataFilter(
-            "",
-            [
-                {
-                    name: "tag",
-                    type: "array_string",
-                    map: {
-                        value: "tags",
-                        search: "tag"
-                    }
-                },
-                {
-                    name: "main",
-                    type: "string",
-                    map: {
-                        value: ["title", "author"]
-                    }
+    state.filter = new DataFilter(
+        "",
+        [
+            {
+                name: "tag",
+                type: "array_string",
+                map: {
+                    value: "tags",
+                    search: "tag"
                 }
-            ],
-            state.data
-        );
+            },
+            {
+                name: "main",
+                type: "string",
+                map: {
+                    value: ["title", "author"]
+                }
+            }
+        ],
+        state.data
+    );
 
     renderTagSelector();
-
     updateFilterFromUI();
 
-    dom.keywordInput.addEventListener(
-        "input",
-        () => {
-            debounce(() => {
-                updateFilterFromUI();
-            });
-        }
-    );
+    dom.keywordInput.addEventListener("input", () => {
+        debounce(() => {
+            updateFilterFromUI();
+        });
+    });
 
-    dom.queryInput.addEventListener(
-        "input",
-        () => {
-            debounce(() => {
-                runFilter(
-                    dom.queryInput.value
-                );
+    dom.queryInput.addEventListener("input", () => {
+        debounce(() => {
+            runFilter(dom.queryInput.value);
+        });
+    });
 
-            });
-        }
-    );
-
-    dom.toggleMode.addEventListener(
-        "click",
-        switchMode
-    );
+    dom.toggleMode.addEventListener("click", switchMode);
 }
 
 init();

@@ -27,6 +27,117 @@
 		"title": "OpenToonz",
 		"tags": ["animation_2d", "open_source"]
 	},
+	{
+		"title": "Pivot Stickfigure Animator",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "TISFAT",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Vectorian Giotto",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Adobe After Effects",
+		"author": "Adobe Inc.",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Adobe Flash",
+		"author": "Adobe Inc.",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Adobe Animate",
+		"author": "Adobe Inc.",
+		"tags": ["animation_2d"]
+	},
+		{
+		"title": "Anime Studio",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Antics 2-D Animation",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Apple iAd Producer",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Autodesk Animator",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Cacani",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Crazytalk",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "DigiCel FlipBook",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "DrawPlus",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Avid Elastic Reality",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Express Animator",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Fantavision",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Gryphon Software Morph",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Mediator",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Motion",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "ParticleIllusion",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "SWiSH Max",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Stykz",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Toon Boom Animation",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Toonz",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "Toufee",
+		"tags": ["animation_2d"]
+	},
+	{
+		"title": "TVPaint",
+		"tags": ["animation_2d"]
+	},
     {
         "title": "Art of Illusion",
         "tags": ["animation_3d", "open_source"]
@@ -46,5 +157,49 @@
     {
         "title": "Toonloop",
         "tags": ["animation_3d", "open_source"]
-    }
+    },
+	{
+		"title": "Autodesk MotionBuilder",
+		"tags": ["animation_3d"]
+	},
+	{
+		"title": "Dimp Animator",
+		"tags": ["animation_3d"]
+	},
+	{
+		"title": "Dynamation",
+		"tags": ["animation_3d"]
+	},
+	{
+		"title": "Fix8",
+		"tags": ["animation_3d"]
+	},
+	{
+		"title": "MASSIVE",
+		"tags": ["animation_3d"]
+	},
+	{
+		"title": "Messiah",
+		"tags": ["animation_3d"]
+	},
+	{
+		"title": "Moviestorm",
+		"tags": ["animation_3d"]
+	},
+	{
+		"title": "Shark 3D",
+		"tags": ["animation_3d"]
+	},
+	{
+		"title": "Softimage 3D",
+		"tags": ["animation_3d"]
+	},
+	{
+		"title": "Swift 3D",
+		"tags": ["animation_3d"]
+	},
+	{
+		"title": "Presto",
+		"tags": ["animation_3d"]
+	}
 ]
